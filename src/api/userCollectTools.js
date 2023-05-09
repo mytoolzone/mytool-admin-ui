@@ -65,16 +65,17 @@ export const updateUserCollectTools = (data) => {
 }
 
 // @Tags UserCollectTools
-// @Summary 查询UserCollectTool
+// @Summary 用id查询UserCollectTools
 // @Security ApiKeyAuth
 // @accept application/json
 // @Produce application/json
 // @Param data query model.UserCollectTools true "用id查询UserCollectTools"
 // @Success 200 {string} string "{"success":true,"data":{},"msg":"查询成功"}"
 // @Router /userCollectTools/findUserCollectTools [get]
-export const findUserCollectTool = (params) => {
+
+export const findUserCollectTools = (params) => {
   return service({
-    url: '/userCollectTools/findUserCollectTool',
+    url: '/userCollectTools/findUserCollectTools',
     method: 'get',
     params
   })
@@ -90,7 +91,7 @@ export const findUserCollectTool = (params) => {
 // @Router /userCollectTools/getUserCollectToolsList [get]
 export const getUserCollectToolsList = (params) => {
   return service({
-    url: '/userCollectTools/getIndexUserCollectToolsList',
+    url: '/userCollectTools/getUserCollectToolsList',
     method: 'get',
     params
   })
