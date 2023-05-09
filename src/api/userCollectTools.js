@@ -72,7 +72,6 @@ export const updateUserCollectTools = (data) => {
 // @Param data query model.UserCollectTools true "用id查询UserCollectTools"
 // @Success 200 {string} string "{"success":true,"data":{},"msg":"查询成功"}"
 // @Router /userCollectTools/findUserCollectTools [get]
-
 export const findUserCollectTools = (params) => {
   return service({
     url: '/userCollectTools/findUserCollectTools',

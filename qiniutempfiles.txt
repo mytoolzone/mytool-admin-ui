@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 user/.DS_Store	6148	FsPAKKvKkgShv5VvCBwWb8vtEzO9	16815370641837796	application/octet-stream	0	
 user/index.html	1989	Fj3umCojonJ6Hia-9MYKBZzDDk25	16815370642900908	text/html	0	
 user/static/Index-list-legacy.a3091bfe.js	700	Fk5LS103KOsbpb7XgVpXC13IEndv	16815370643561751	application/javascript	0	
@@ -395,6 +396,8 @@ user/static/warningBar-legacy.ea773bd2.js	1752	Fk6jzhQVa4QDoHu9L68Nxhu_C6DL	1681
 user/static/warningBar.41e08331.css	411	FndjMQYqSftc-buS9-kBC2sdqkd3	16815371083164976	text/css	0	
 user/static/warningBar.f2cdf6f6.js	1166	Fgw6A3W3nS-JhrJvZMsZw_mYU4jf	16815371084148778	application/javascript	0	
 =======
+=======
+>>>>>>> master
 boss/.DS_Store	6148	FsPAKKvKkgShv5VvCBwWb8vtEzO9	16815390830497393	application/octet-stream	0	
 boss/index.html	1989	FiyiU63QkWFgb-lxsMPyZtvvJ9Qu	16815390831424509	text/html	0	
 boss/static/Index-list-legacy.634f8b23.js	700	FiYnM4f0LgDxfP1DKEcyfWTp4uiR	16815390832474176	application/javascript	0	
@@ -805,4 +808,7 @@ boss/static/userToolsForm.21d1d0e5.js	2592	Fq_bBLfMkfDaiKXsQcEfYZNn559u	16815391
 boss/static/warningBar-legacy.01af1973.js	1220	FraOitme0fA2upz4pf0GgfN0cqbz	16815391288854547	application/javascript	0	
 boss/static/warningBar.41e08331.css	411	FoYIHE8F9BIjMiWq3unQHlGcGAJe	16815391289901429	text/css	0	
 boss/static/warningBar.ea511103.js	638	FkGrgIloQ0s7S96neovwR2kDiTeU	16815391290712982	application/javascript	0	
+<<<<<<< HEAD
 >>>>>>> 7a42cc9 (tools)
+=======
+>>>>>>> master
