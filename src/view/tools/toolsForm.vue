@@ -56,9 +56,19 @@
               </el-select>
             </el-form-item>
           </el-col>
+
           <el-col :span="8">
             <el-form-item label="标签:"  prop="tags" >
-              <el-select v-model="formData.tags" placeholder="请选择" style="width:100%">
+              <!-- <el-select v-model="formData.tags" placeholder="请选择" style="width:100%">
+                <el-option 
+                  v-for="item in tool_tagOptions"
+                  :key="item.value"
+                  :label="`${item.label}(${item.value})`"
+                  :value="item.value"
+                />
+              </el-select> -->
+
+              <el-select multiple v-model="formDataUi" placeholder="请选择" style="width:100%">
                 <el-option 
                   v-for="item in tool_tagOptions"
                   :key="item.value"
@@ -66,6 +76,7 @@
                   :value="item.value"
                 />
               </el-select>
+
             </el-form-item>
           </el-col>
         </el-row>
@@ -117,6 +128,8 @@ const type = ref('')
 const tool_typeOptions = ref([])
 const tool_attrOptions = ref([])
 const tool_tagOptions = ref([])
+const formDataUi = ref({})
+
 const formData = ref({
             userId: 0,
             name: '',
@@ -181,6 +194,7 @@ const init = async () => {
       const res = await findTools({ ID: route.query.id })
       if (res.code === 0) {
         formData.value = res.data.retools
+        formDataUi.value  = formData.value.tags.split(',')
         type.value = 'update'
       }
     } else {
@@ -194,6 +208,8 @@ const init = async () => {
 init()
 // 保存按钮
 const save = async() => {
+      formData.value.tags = formDataUi.value.join(',')
+
       elFormRef.value?.validate( async (valid) => {
          if (!valid) return
             let res
