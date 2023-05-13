@@ -76,8 +76,7 @@ export const useRouterStore = defineStore('router', () => {
     }]
     const asyncRouterRes = await asyncMenu()
     const asyncRouter = asyncRouterRes.data.menus
-    asyncRouter && asyncRouter.push(
-      {
+    asyncRouter && asyncRouter.push({
       path: '404',
       name: '404',
       hidden: true,
@@ -95,9 +94,7 @@ export const useRouterStore = defineStore('router', () => {
         closeTab: true,
       },
       component: 'view/error/reload.vue'
-    }
-    )
-
+    })
     formatRouter(asyncRouter, routeMap)
     baseRouter[0].children = asyncRouter
     if (notLayoutRouterArr.length !== 0) {
@@ -124,4 +121,3 @@ export const useRouterStore = defineStore('router', () => {
     routeMap
   }
 })
-

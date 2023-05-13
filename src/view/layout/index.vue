@@ -7,7 +7,7 @@
           <!-- <img alt class="logoimg" :src="$GIN_VUE_ADMIN.appLogo"> -->
           <img alt class="logoimg" src="@/assets/logo.png" >
 
-          <div v-if="isSider" class="tit-text" :style="{color:textColor}">{{ $GIN_VUE_ADMIN.appName }}</div>
+          <div v-if="isSider" class="tit-text" :style="{color:textColor}">MyToolZone</div>
         </div>
         <Aside class="aside" />
       </el-aside>
