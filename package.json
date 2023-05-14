@@ -13,6 +13,8 @@
     "@element-plus/icons-vue": "^0.2.7",
     "@form-create/designer": "^3.1.1",
     "@form-create/element-ui": "^3.1.16",
+    "@tiptap/starter-kit": "^2.0.3",
+    "@tiptap/vue-3": "^2.0.3",
     "axios": "^0.19.2",
     "core-js": "^3.6.5",
     "echarts": "5.3.2",
@@ -33,6 +35,8 @@
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
+    "@tiptap/extension-document": "^2.0.3",
+    "@tiptap/extension-image": "^2.0.3",
     "@vitejs/plugin-legacy": "^2.0.0",
     "@vitejs/plugin-vue": "^3.0.1",
     "@vue/cli-plugin-babel": "~4.5.0",
