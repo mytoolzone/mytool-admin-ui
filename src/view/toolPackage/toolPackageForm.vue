@@ -143,7 +143,7 @@
       </el-dialog>
     </div>
   </div>
-  <choose-img ref="chooseImg" @enterImg="insertImgToEditor" ></choose-img>
+  <choose-img ref="chooseImg" @enterImg="insertImgToEditor" />
 </template>
 
 <script>
@@ -182,9 +182,9 @@ const editor = useEditor({
     '<p> 功能1: xxxx</p>' +
     '<img src="https://tools.mytool.zone/logo.png"/>' +
     '<h2>学习资料</h2>' +
-    '<p>快速学习sd: https://zhuanlan.zhihu.com/p/56194917 </p>' +
+    '<p>快速学习sd: https://zhuanlan.zhihu.com </p>' +
     '<h2>视频教程</h2>' +
-    '<p>手把手学习sd: https://www.bilibili.com/video/BV1qv411r77n/ </p>',
+    '<p>手把手学习sd: https://www.bilibili.com</p>',
   extensions: [
     StarterKit,
     Document,
@@ -240,6 +240,10 @@ const init = async() => {
       formData.value = res.data.retoolPackage
       type.value = 'update'
     }
+
+    if (formData.value.readme) {
+      editor.value.commands.setContent(formData.value.readme)
+    }
   } else {
     type.value = 'create'
   }
@@ -250,6 +254,9 @@ init()
 const save = async() => {
   elFormRef.value?.validate(async(valid) => {
     if (!valid) return
+
+    formData.value.readme = editor.value?.getHTML()
+
     let res
     switch (type.value) {
       case 'create':
